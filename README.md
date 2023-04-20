@@ -2,6 +2,9 @@
 
 F1Dash is a Google Chrome extension that displays all the upcoming and already finished races for the current Formula One season. It uses the [Ergast Developer API](https://ergast.com/mrd/) to get the latest race schedule, Grand Prix name, circuit name, race round, and race date. The extension also shows current driver standings and race times.
 
+![f1dashimage](https://user-images.githubusercontent.com/48349453/233317667-1c2187fd-f827-494d-b10a-296c26de5743.png)
+
+
 ## Features
 
 - Displays upcoming and already finished races for the current Formula One season.
