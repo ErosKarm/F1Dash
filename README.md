@@ -30,7 +30,6 @@ F1Dash is a Google Chrome extension that displays all the upcoming and already f
 1. Click on the extension icon in the toolbar to open the popup window.
 2. The popup window will display the race schedule for the current Formula One season.
 3. Use the dedicated buttons in the popup window to navigate between the upcoming and already finished races.
-4. Click on a race to view more details, such as driver standings and race time.
 
 ## Credits
 
