@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "F1Dash",
+  "description": "Get information about the next F1 Race",
+  "version": "1.0.0",
+  "author": "Eros Karm",
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

@@ -1,0 +1,204 @@
+body {
+  height: 400px;
+  width: 550px;
+  overflow: hidden;
+  background-color: #1f1f27;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  border-right: 2px solid red;
+  border-bottom: 2px solid red;
+  background-image: url(./plus.png);
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1.5rem;
+  width: 90%;
+}
+
+.countDown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  gap: 1.5rem;
+}
+
+.align-center:not(:last-child) {
+  border-bottom: 1px solid rgb(58, 58, 58);
+}
+
+.align-center:hover {
+  background-color: #ff000052;
+  backdrop-filter: blur(50px);
+  cursor: pointer;
+}
+
+.eventName {
+  width: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.eventTime {
+  margin: 2px;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  justify-content: center;
+}
+
+.round,
+.date {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.display-none {
+  display: none;
+}
+
+.previous {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  filter: invert(100%) sepia(0%) saturate(7455%) hue-rotate(108deg)
+    brightness(115%) contrast(101%);
+  cursor: pointer;
+}
+
+.icon:hover {
+  filter: invert(18%) sepia(86%) saturate(5416%) hue-rotate(359deg)
+    brightness(98%) contrast(126%);
+}
+
+.timeRemaining {
+  color: rgb(165, 2, 2);
+}
+
+.race-information {
+  display: flex;
+  width: 100%;
+}
+
+.race-stats {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 25px;
+}
+
+.race-times {
+  width: 50%;
+}
+
+.curDate {
+  color: #b4b4b4;
+  font-size: 0.6rem;
+}
+
+.curTime {
+  background-color: #38383f;
+  padding: 5px 10px;
+
+  border-radius: 15px;
+}
+
+.driverPos {
+  font-size: 1.2rem;
+  width: 30px;
+}
+
+.driver {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 1rem;
+  height: 30px;
+}
+
+.driver:hover {
+  background-color: #ff000052;
+  backdrop-filter: blur(50px);
+  cursor: pointer;
+}
+
+.driver-standings-align {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr 1.5fr 1.3fr;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.raceStatscontainer {
+  height: 116px;
+}
+
+/* SPINNER WHEN WAITING FOR DATA FETCHING */
+.loader {
+  border: 6px solid #ffffff; /* Light grey */
+  border-top: 6px solid #ff0000; /* Blue */
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  animation: spin 2s linear infinite;
+}
+
+.position {
+  background-color: #38383f;
+  border-radius: 15px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.finished {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
