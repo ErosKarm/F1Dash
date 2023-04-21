@@ -101,31 +101,6 @@ const getRaceStatus = () => {
   }
 };
 
-const getCountDown = (object, element) => {
-  console.log(document.querySelector(".countDown"));
-
-  // const correctDate = new Date(`${object.date}T${object.time}`).getTime();
-  // console.log("it was called");
-
-  // const countDown = setInterval(function () {
-  //   const now = new Date().getTime();
-
-  //   const distance = correctDate - now;
-
-  //   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  //   const hours = Math.floor(
-  //     (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  //   );
-  //   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  //   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  //   console.log(document.getElementById("countDown"));
-
-  //   document.getElementById("countDown").innerHTML =
-  //     days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-  // }, 1000);
-};
-
 const displayData = async (object) => {
   let countrycode = getCountryFlag(object.Circuit.Location.country);
   let raceStatus = getRaceStatus();
