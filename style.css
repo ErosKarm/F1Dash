@@ -149,10 +149,9 @@ body {
   gap: 15px;
 }
 
-/* SPINNER WHEN WAITING FOR DATA FETCHING */
 .loader {
-  border: 6px solid #ffffff; /* Light grey */
-  border-top: 6px solid #ff0000; /* Blue */
+  border: 6px solid #ffffff;
+  border-top: 6px solid #ff0000;
   border-radius: 50%;
   width: 35px;
   height: 35px;
