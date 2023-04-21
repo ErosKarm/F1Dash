@@ -56,7 +56,7 @@ const getDates = (date, time) => {
 };
 
 const getRaceStatus = () => {
-  console.log(finishPositions[curRaceRound]?.Results[0].Driver);
+  console.log(finishPositions[curRaceRound]?.Results);
 
   if (finishPositions[curRaceRound]) {
     return `
