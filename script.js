@@ -20,7 +20,6 @@ const getCountryFlag = async (country) => {
     if (countryCode === undefined && country === "USA") countryCode = "us";
     if (countryCode === undefined && country === "UK") countryCode = "gb";
     if (countryCode === undefined && country === "UAE") countryCode = "ae";
-
     if (countryCode === undefined) {
       return "";
     }
@@ -57,6 +56,8 @@ const getDates = (date, time) => {
 };
 
 const getRaceStatus = () => {
+  console.log(finishPositions[curRaceRound]?.Results[0].Driver);
+
   if (finishPositions[curRaceRound]) {
     return `
     <div class="driverStandings">
@@ -64,6 +65,7 @@ const getRaceStatus = () => {
     <p>Race status: </p>
     <p style="color: green; font-weight: bold;">FINISHED</p>
     </div>
+    <p>WINNER: ${finishPositions[curRaceRound]?.Results[0].Driver.givenName} ${finishPositions[curRaceRound]?.Results[0].Driver.familyName}</p>
     <div class="driverStandingsFirst driver-standings-align">
     <p class="position">1</p>
     <p>${finishPositions[curRaceRound]?.Results[0].Driver.permanentNumber} ${finishPositions[curRaceRound]?.Results[0].Driver.code}</p>
@@ -79,23 +81,17 @@ const getRaceStatus = () => {
 
     return `
     <div class="raceStatscontainer">
-
     <div class="finished">
     <p>Race status: </p>
     <p style="color: red; font-weight: bold;">NOT FINISHED</p>
     </div>
-
+    <p>WINNER: ----</p>
     <div class="driverStandingsFirst driver-standings-align">
-
     <p class="position">1</p>
     <p>----</p>
     <p>----</p>
     <p>----</p>
     </div>
- 
-    
-
-  
   </div>
     `;
   }
@@ -134,7 +130,7 @@ const displayData = async (object) => {
       <p>${driverStandings[0].points} points</p>
       </div>
       <div class="driverStandingsFirst driver-standings-align">
-      <p class="position">1</p>
+      <p class="position">2</p>
       <p>${driverStandings[1].Driver.permanentNumber} ${
     driverStandings[1].Driver.code
   }</p>
@@ -142,7 +138,7 @@ const displayData = async (object) => {
       <p>${driverStandings[1].points} points</p>
       </div>
       <div class="driverStandingsFirst driver-standings-align">
-      <p class="position">1</p>
+      <p class="position">3</p>
       <p>${driverStandings[2].Driver.permanentNumber} ${
     driverStandings[2].Driver.code
   }</p>
@@ -219,14 +215,12 @@ const displayData = async (object) => {
 
   document.getElementById("previous").addEventListener("click", () => {
     if (curRaceRound === 0) return;
-    getCountDown();
     curRaceRound = curRaceRound - 1;
     displayData(allRaces[curRaceRound]);
   });
 
   document.getElementById("next").addEventListener("click", () => {
     if (curRaceRound === allRaces.length - 1) return;
-    getCountDown();
     curRaceRound = curRaceRound + 1;
     displayData(allRaces[curRaceRound]);
   });
